@@ -1,6 +1,6 @@
 Arquitectuta Hexagonal.
 
-![](D:\workspace\AMARIS\hexagonal-architecture-features\hex.png)
+![](.\hex.png)
 
 
 CASO DE USO 1: devolver productos
