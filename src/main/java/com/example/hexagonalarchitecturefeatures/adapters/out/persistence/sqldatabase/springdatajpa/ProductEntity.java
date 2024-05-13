@@ -18,13 +18,13 @@ public class ProductEntity implements Serializable {
         private String category;
         private Double price;
         private Integer stock;
-        private Integer cost;
+        private Double cost;
         private LocalDateTime creationDate;
 
         public ProductEntity() {
         }
 
-        public ProductEntity(Long id, String name, String category, Double price, Integer stock, Integer cost, LocalDateTime creationDate) {
+        public ProductEntity(Long id, String name, String category, Double price, Integer stock, Double cost, LocalDateTime creationDate) {
                 this.id = id;
                 this.name = name;
                 this.category = category;
@@ -74,11 +74,11 @@ public class ProductEntity implements Serializable {
                 this.stock = stock;
         }
 
-        public Integer getCost() {
+        public Double getCost() {
                 return cost;
         }
 
-        public void setCost(Integer cost) {
+        public void setCost(Double cost) {
                 this.cost = cost;
         }
 

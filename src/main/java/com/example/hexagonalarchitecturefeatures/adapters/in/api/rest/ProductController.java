@@ -1,8 +1,10 @@
 package com.example.hexagonalarchitecturefeatures.adapters.in.api.rest;
 
 
+import com.example.hexagonalarchitecturefeatures.core.domain.Product;
 import com.example.hexagonalarchitecturefeatures.ports.in.ProductReadInPort;
 import com.example.hexagonalarchitecturefeatures.ports.in.ProductWriteInPort;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,9 +39,11 @@ public class ProductController {
 
     }
 
-    @PostMapping(/api/products/)
-    public ProductDTO save(@RequestBody ProductDTO productDTO) {
-        this.productWriteInPort.save(productDTO);
+    @PostMapping("/api/products")
+    public ResponseEntity<ProductDTO> save(@RequestBody ProductDTO productDTO) {
+        Product productDB = this.productWriteInPort.save(ProductWebMapper.of(productDTO));
+        return ResponseEntity.ok(ProductWebMapper.of(productDB));
+
     }
 
 }

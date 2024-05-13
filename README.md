@@ -32,3 +32,17 @@ CASO DE USO 2: registrar productos
 
 5. ProductWriteOutPort (interfaz)
 6. ProductDAO (ADAPTADOR DE SALIDA: adaptador de persistencia)
+
+
+*Para levantar la base de datos mysql*
+
+- ruta: src/main/java/com/example/hexagonalarchitecturefeatures/adapters/out/persistence/sqldatabase/infrastructure/db/docker-compose.yml
+
+```bash
+docker-compose up -d
+```
+
+
+*Configuración properties*
+
+- src/main/resources/application.properties

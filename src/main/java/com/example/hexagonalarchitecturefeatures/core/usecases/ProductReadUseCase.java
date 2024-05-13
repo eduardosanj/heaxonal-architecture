@@ -12,6 +12,10 @@ public class ProductReadUseCase implements ProductReadInPort {
     //Puerto de salida (Interfaz) (implementado por un puerto de salida)
     private ProductReadOutPort productReadOutPort;
 
+    public ProductReadUseCase(ProductReadOutPort productReadOutPort) {
+        this.productReadOutPort = productReadOutPort;
+    }
+
     @Override
     public List<Product> findAll() {
         return productReadOutPort.findAll();
