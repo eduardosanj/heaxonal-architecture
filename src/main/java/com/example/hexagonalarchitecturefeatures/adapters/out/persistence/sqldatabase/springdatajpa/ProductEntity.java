@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name="products")
 public class ProductEntity implements Serializable {
 
 
