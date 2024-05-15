@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class ProductController {
+public class ProductRestController {
 
     //Puertos de entrada al hexágono (interface)
     private ProductReadInPort productReadInPort;
     private ProductWriteInPort productWriteInPort;
 
-    public ProductController(ProductReadInPort productReadInPort, ProductWriteInPort productWriteInPort) {
+    public ProductRestController(ProductReadInPort productReadInPort, ProductWriteInPort productWriteInPort) {
         this.productReadInPort = productReadInPort;
         this.productWriteInPort = productWriteInPort;
     }
